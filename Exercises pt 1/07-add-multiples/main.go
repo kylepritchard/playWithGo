@@ -16,5 +16,5 @@ func main() {
 		}
 	}
 
-	fmt.Println("The sum of all mutiple of 3 & 5 up to 1000 =", sum)
+	fmt.Println("The sum of all mutiples of 3 & 5 up to 1000 =", sum)
 }
