@@ -8,9 +8,9 @@ func main() {
 	var smallNumber int
 
 	fmt.Print("Enter the big number: ")
-	fmt.Scanf("%v", &bigNumber)
+	fmt.Scan(&bigNumber)
 	fmt.Print("Enter the small number: ")
-	fmt.Scanf("%v", &smallNumber)
+	fmt.Scan(&smallNumber)
 
 	remainder := bigNumber % smallNumber
 
