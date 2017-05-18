@@ -7,7 +7,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"strconv"
 	"time"
 )
@@ -34,10 +33,10 @@ func main() {
 		}
 	}
 
-	fmt.Println("The biggest palindrome is", biggest[2], "which is", biggest[0], "=", biggest[1])
+	fmt.Println("The biggest palindrome is", biggest[2], "which is", biggest[0], "*", biggest[1])
 
 	timeElapsed := time.Since(timeStart)
-	log.Printf("Finding palindromes took %s", timeElapsed)
+	fmt.Printf("Finding palindromes took %s \n", timeElapsed)
 
 }
 
