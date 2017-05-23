@@ -41,14 +41,11 @@ func main() {
 	fmt.Println("3: Integers sorted", n)
 
 	//Reverse
-
 	sort.Sort(sort.Reverse(peeps))
-	t := []string{"Zeno", "John", "Al", "Jenny"}
-	sort.Sort(sort.Reverse(sort.StringSlice(t)))
-	o := []int{7, 4, 8, 2, 9, 19, 12, 32, 3}
-	sort.Sort(sort.Reverse(sort.IntSlice(o)))
+	sort.Sort(sort.Reverse(sort.StringSlice(s)))
+	sort.Sort(sort.Reverse(sort.IntSlice(n)))
 
 	fmt.Println("4: People in reverse", peeps)
-	fmt.Println("5: Strings in reverse", t)
-	fmt.Println("6: Numbers in reverse", o)
+	fmt.Println("5: Strings in reverse", s)
+	fmt.Println("6: Numbers in reverse", n)
 }
