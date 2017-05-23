@@ -14,7 +14,7 @@ import (
 func main() {
 
 	//work out all the multiples from 100 to 999 (x * y = z)
-
+	iterations := 0
 	var z int
 	var z_string string
 	var biggest [3]int //save biggest palindrome info in an array
@@ -23,16 +23,17 @@ func main() {
 
 	for x := 100; x <= 999; x++ {
 		for y := 100; y <= 999; y++ {
+			iterations++
 			z = x * y
 			z_string = strconv.Itoa(z) //convert to a string
-			if checkPalindrome(z_string) && z > biggest[2] {
+			if checkPalindrome(z_string) && z >= biggest[2] {
 				biggest[0] = x
 				biggest[1] = y
 				biggest[2] = z
 			}
 		}
 	}
-
+	fmt.Println("Number of iterations done:", iterations)
 	fmt.Println("The biggest palindrome is", biggest[2], "which is", biggest[0], "*", biggest[1])
 
 	timeElapsed := time.Since(timeStart)
