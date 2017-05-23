@@ -16,7 +16,7 @@ func main() {
 	//work out all the multiples from 100 to 999 (x * y = z)
 	iterations := 0
 	var z int
-	var z_string string
+	var zString string
 	var biggest [3]int //save biggest palindrome info in an array
 
 	timeStart := time.Now()
@@ -25,8 +25,8 @@ func main() {
 		for y := 100; y <= 999; y++ {
 			iterations++
 			z = x * y
-			z_string = strconv.Itoa(z) //convert to a string
-			if checkPalindrome(z_string) && z >= biggest[2] {
+			zString = strconv.Itoa(z) //convert to a string
+			if checkPalindrome(zString) && z >= biggest[2] {
 				biggest[0] = x
 				biggest[1] = y
 				biggest[2] = z
@@ -42,8 +42,8 @@ func main() {
 }
 
 func checkPalindrome(s string) bool {
-	var length int = len(s)
-	var fromEnd int = 0
+	var length = len(s)
+	var fromEnd int
 
 	for i := 0; i < (length / 2); i++ {
 		fromEnd = (length - 1) - i //length of string is 1 higher than index
